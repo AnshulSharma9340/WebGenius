@@ -1,0 +1,53 @@
+<!-- luminal-q/frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminal Q: AI Web App Generator</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css"> <!-- Custom CSS ke liye (abhi khaali hai) -->
+    <style>
+        /* Custom font ke liye */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-600 to-blue-800 flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white bg-opacity-90 rounded-3xl shadow-xl p-8 md:p-12 w-full max-w-2xl transform transition-all duration-300 hover:scale-105">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-6 drop-shadow-lg">
+            Luminal Q
+        </h1>
+        <p class="text-center text-gray-700 text-lg mb-8">
+           A advanced AI web App Generator
+        </p>
+
+        <div class="mb-6">
+            <textarea
+                id="prompt-input"
+                class="w-full p-4 rounded-xl border-2 border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 transition-all duration-200 resize-y min-h-[120px] shadow-sm text-gray-800 placeholder-gray-400"
+                placeholder="Example: Ek e-commerce website banao jismein user authentication, product listings aur shopping cart ho."
+            ></textarea>
+        </div>
+
+        <button
+            id="generate-button"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 active:bg-blue-800"
+        >
+             Generate Application
+        </button>
+
+        <div class="mt-8 p-4 bg-gray-100 rounded-xl text-gray-700 text-center text-md shadow-inner">
+            <p class="font-semibold mb-2">Status:</p>
+            <p id="status-display">Enter the prompt to generate web application</p>
+            <p id="generated-url-display" class="text-sm text-blue-600 mt-2 hidden">
+                Generated App URL: <a href="#" target="_blank" class="underline hover:no-underline">Click to Open</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- JavaScript file ko load karein -->
+</body>
+</html>

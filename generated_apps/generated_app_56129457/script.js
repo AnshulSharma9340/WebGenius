@@ -1,0 +1,1 @@
+// Add JavaScript functionality here (e.g., smooth scrolling)
